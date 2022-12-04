@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/Framework/App/Manifest/Schema/manifest-1.0.xsd">
+    <meta>
+        <name>PageSpeed</name>
+        <label>PageSpeed 💯</label>
+        <label lang="de-DE">PageSpeed 💯</label>
+        <description>PageSpeed 💯</description>
+        <description lang="de-DE">PageSpeed 💯</description>
+        <author>Marius Faber</author>
+        <copyright>Marius Faber</copyright>
+        <version>0.0.18</version>
+        <icon>icon.png</icon>
+        <license>Open Source Software</license>
+    </meta>
+</manifest>

@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+
+{% block layout_header_actions_cart %}
+    {{ parent() }}
+    <script>
+        if(localStorage.hasOwnProperty('cart-widget-template')) {
+            document.querySelectorAll('[data-cart-widget]')[0].innerHTML = localStorage.getItem('cart-widget-template');
+        }
+    </script>
+{% endblock %}

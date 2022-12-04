@@ -1,0 +1,47 @@
+/*
+Gallery slider
+==============================================
+Styling for gallery slider component.
+Displays images in a slider gallery with thumbnail navigation.
+based on "base-slider" component and "tiny-slider" (https://github.com/ganlanyuan/tiny-slider)
+*/
+
+.gallery-slider-row:not(.js-slider-initialized) {
+    .is-underneath {
+        .gallery-slider-thumbnails {
+            width: calc(133.333%);
+            .gallery-slider-thumbnails-item {
+                width: calc(12.676%);
+                padding-right: 10px;
+            }
+        }
+
+        .gallery-slider-thumbnails-container {
+            margin: 0 30px;
+        }
+    }
+
+    .gallery-slider-item-container:not(:first-child) {
+        display: none;
+    }
+
+    .first-gallery-slider-thumbnail {
+        border-color: $primary;
+    }
+}
+
+.cms-element-image-gallery{
+    .gallery-slider-row.is-loading {
+        height: unset;
+    }
+}
+
+.gallery-slider-thumbnails-container {
+    .gallery-slider-thumbnails-controls {
+        display: none;
+    }
+}
+
+
+
+

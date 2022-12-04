@@ -1,0 +1,40 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-image-gallery.html.twig' %}
+
+{% block element_image_gallery_slider_dots_buttons %}
+    {% for image in mediaItems %}
+        {% block element_image_gallery_slider_dots_button %}
+            <button class="base-slider-dot {% if loop.first %}tns-nav-active{% endif %}"
+                    data-nav-dot="{{ loop.index }}"
+                    tabindex="-1"></button>
+        {% endblock %}
+    {% endfor %}
+{% endblock %}
+
+{% block element_image_gallery_inner_thumbnails_items %}
+  {% for image in mediaItems %}
+      {% block element_image_gallery_inner_thumbnails_item %}
+          <div class="gallery-slider-thumbnails-item">
+              {% block element_image_gallery_inner_thumbnails_item_inner %}
+                  <div class="gallery-slider-thumbnails-item-inner {% if loop.first %} first-gallery-slider-thumbnail{% endif %}">
+                      {% set attributes = {
+                          'class': 'gallery-slider-thumbnails-image',
+                          'alt': (image.translated.alt ?: fallbackImageTitle),
+                          'title': (image.translated.title ?: fallbackImageTitle)
+                      } %}
+
+                      {% if isProduct %}
+                          {% set attributes = attributes|merge({ 'itemprop': 'image' }) %}
+                      {% endif %}
+
+                      {% sw_thumbnails 'gallery-slider-thumbnails-image-thumbnails' with {
+                          media: image,
+                          sizes: {
+                              'default': '200px'
+                          }
+                      } %}
+                  </div>
+              {% endblock %}
+          </div>
+      {% endblock %}
+  {% endfor %}
+{% endblock %}

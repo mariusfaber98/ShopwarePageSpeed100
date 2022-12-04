@@ -1,0 +1,115 @@
+/*
+Product slider
+==============================================
+Styling for product slider component.
+Displays product-boxes in a reusable slider component.
+based on "base-slider" component and "tiny-slider" (https://github.com/ganlanyuan/tiny-slider)
+*/
+
+.cms-block-product-slider {
+    .product-slider-container {
+        display: flex;
+    }
+
+    .product-slider:not(.js-slider-initialized) {
+        margin-right: -30px;
+    }
+
+    .product-slider-container:not(.tns-slider) {
+        width: calc(700%);
+        display: flex;
+    }
+
+    .product-slider-item:not(.tns-item) {
+        width: calc(14.2857%);
+        padding-right: 30px;
+    }
+
+    .cms-element-product-slider {
+        overflow: hidden;
+    }
+
+    .product-slider-controls-next:not([data-controls='next']) {
+        right: 20px;
+    }
+
+    @include media-breakpoint-up(md) {
+        .product-slider-container:not(.tns-slider) {
+            width: calc(550%);
+        }
+
+        .product-slider-item:not(.tns-item) {
+            width: calc(9.09091%);
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .product-slider-container:not(.tns-slider) {
+            width: calc(500%);
+        }
+
+        .product-slider-item:not(.tns-item) {
+            width: calc(6.66667%);
+        }
+    }
+}
+
+.product-detail-cross-selling {
+    .product-slider-container {
+        display: flex;
+        padding-bottom: 25px;
+    }
+
+    .product-slider:not(.js-slider-initialized) {
+        margin-right: -30px;
+    }
+
+    .product-slider-container:not(.tns-slider) {
+        width: calc(900%);
+        display: flex;
+    }
+
+    .product-slider-item:not(.tns-item) {
+        width: calc(11.1111%);
+        padding-right: 30px;
+    }
+
+    .cms-element-product-slider {
+        overflow: hidden;
+    }
+
+    .product-slider-controls-next:not([data-controls='next']) {
+        right: 20px;
+    }
+
+    @include media-breakpoint-up(md) {
+        .product-slider-container:not(.tns-slider) {
+            width: calc(550%);
+        }
+
+        .product-slider-item:not(.tns-item) {
+            width: calc(9.09091%);
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .product-slider-container:not(.tns-slider) {
+            width: calc(500%);
+        }
+
+        .product-slider-item:not(.tns-item) {
+            width: calc(6.66667%);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .product-slider-container:not(.tns-slider) {
+            width: calc(525%);
+        }
+
+        .product-slider-item:not(.tns-item) {
+            width: calc(4.7619%);
+        }
+    }
+}
+
