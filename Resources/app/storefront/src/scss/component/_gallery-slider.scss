@@ -30,7 +30,17 @@ based on "base-slider" component and "tiny-slider" (https://github.com/ganlanyua
     }
 }
 
-.cms-element-image-gallery{
+.gallery-slider-thumbnails-col {
+    display: none;
+}
+
+@include media-breakpoint-up(md) {
+    .gallery-slider-thumbnails-col {
+        display: block;
+    }
+}
+
+.product-detail-media {
     .gallery-slider-row.is-loading {
         height: unset;
     }
@@ -41,7 +51,6 @@ based on "base-slider" component and "tiny-slider" (https://github.com/ganlanyua
         display: none;
     }
 }
-
 
 
 
